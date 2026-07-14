@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montenegrin+Gothic+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgb(18, 135, 238), rgb(130, 159, 255));
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 12px;
+}
+header img{
+    max-width: 60px;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 100px;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    font-size: 35px;
+    text-align: center;
+    border-radius: 8px;
+}
+.verde{
+    background-image: linear-gradient(#6cc3be, #459b96);
+    border: 5px solid #59b2ae;
+}
+nav a.verde:hover{
+    font-size: 33px;
+    background-image: linear-gradient(#459995, #216e6b);
+    border: 5px solid #3e8c88;
+}
+.azul{
+    background-image: linear-gradient(#0074d3, #015396);
+    border: 5px solid #0269be;
+}
+nav a.azul:hover{
+    font-size: 33px;
+    background-image: linear-gradient(#005eab, #003560);
+    border: 5px solid #005eaa;
+}
+.vermelho{
+    background-image: linear-gradient(#bf231f, #a3231f);
+    border: 5px solid #a81510;
+}
+nav a.vermelho:hover{
+    font-size: 33px;
+    background-image: linear-gradient(#a41a16, #7e1612);
+    border: 5px solid #870e0a;
+}
+.ciano{
+    background-image: linear-gradient(#5b728c, #3d5167);
+    border-radius: 8px;
+    border: 5px solid #334a5f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 8px 12px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgb(18, 135, 238), rgb(130, 159, 255));
+    height: 80px;
+    width: 100%;
+    border-top: 5px solid rgb(8, 128, 233);
+    justify-content: center;
+    align-items: center;
+}
+.fonte{
+    color: white;
+    font-family: "Montenegrin Gothic One", serif;
+    text-align: center;
+}
+.proximo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+}
+
+.card{
+    flex: 3;
+    padding: 10px;
+    margin: 0;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.card p{
+    font-size: 40px;
+    font-style: bold;
+    color: black;
+}
+.lista-horarios{
+    padding: 15px;
+}
+.grade-horarios{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(90px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.horario-item-verde{
+    background: #f4f9ff;
+    border: 2px solid #59b2ae;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1f4f4c;
+}
+.horario-item-azul{
+    background: #f4f9ff;
+    border: 2px solid #0074d3;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1f344f;
+}
+.horario-item-vermelho{
+    background: #f4f9ff;
+    border: 2px solid #bf231f;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4f1f1f;
+}
+.final{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.final a{
+    text-decoration: none;
+    padding: 15px 30px;
+    margin-bottom: 10px;
+}
+.final a:hover{
+    background-image: linear-gradient(#3d5167, #1f2a3b);
+    border: 5px solid #1f2a3b;
+}
