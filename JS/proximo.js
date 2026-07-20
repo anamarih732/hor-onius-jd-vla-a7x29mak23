@@ -1,11 +1,35 @@
 (function () {
+    const datasEspeciais = [
+        "01-01",
+        "21-04",
+        "01-05",
+        "31-05",
+        "13-06",
+        "07-09",
+        "12-10",
+        "02-11",
+        "15-11",
+        "20-11",
+        "25-12"
+    ];
+
     const dayGroupOrder = [
         { title: 'DIAS ÚTEIS', days: [1, 2, 3, 4, 5] },
         { title: 'SÁBADOS', days: [6] },
         { title: 'DOMINGOS E FERIADOS', days: [0] }
     ];
 
+    function isDataEspecial(date) {
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        const dateString = `${day}-${month}`;
+        return datasEspeciais.includes(dateString);
+    }
+
     function getGroupTitleForDate(date) {
+        if (isDataEspecial(date)) {
+            return 'DOMINGOS E FERIADOS';
+        }
         const day = date.getDay();
         const match = dayGroupOrder.find((group) => group.days.includes(day));
         return match ? match.title : 'DIAS ÚTEIS';
