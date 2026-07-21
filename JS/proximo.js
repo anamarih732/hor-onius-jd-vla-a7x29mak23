@@ -64,10 +64,10 @@
 
         if (is607Page && groupTitle === 'DOMINGOS E FERIADOS') {
             const hasSchedule = getSchedulesForDirection(groupTitle, directionLabel).length > 0;
-            return hasSchedule ? '00:00' : '--:--';
+            return hasSchedule ? '00:00' : '-- : --';
         }
 
-        let bestCandidate = '--:--';
+        let bestCandidate = '-- : --';
         let bestDate = null;
 
         for (let offset = 0; offset < 8; offset += 1) {
@@ -84,8 +84,12 @@
                 departureDate.setHours(hours, minutes, 0, 0);
 
                 const isToday = offset === 0;
-                if (isToday && departureDate.getTime() < now.getTime()) {
-                    return;
+                if (isToday) {
+                    const departureTimeInMinutes = Math.floor(departureDate.getTime() / 60000);
+                    const nowTimeInMinutes = Math.floor(now.getTime() / 60000);
+                    if (departureTimeInMinutes < nowTimeInMinutes) {
+                        return;
+                    }
                 }
 
                 if (bestDate === null || departureDate.getTime() < bestDate) {
