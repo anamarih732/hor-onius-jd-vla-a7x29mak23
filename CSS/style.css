@@ -177,3 +177,13 @@ footer{
     background-image: linear-gradient(#3d5167, #1f2a3b);
     border: 5px solid #1f2a3b;
 }
+.avisos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 15px;
+    background-image: linear-gradient(#788ea7, #687f98);
+    border: 2px solid #5b728c;
+    border-radius: 8px;
+}
