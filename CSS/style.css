@@ -233,7 +233,8 @@ footer{
     margin-top: 10px;
     margin-bottom: 20px;
 }
-
-
+    nav p {
+        display: none;
+    }
 }
 
