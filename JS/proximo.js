@@ -124,3 +124,15 @@
 
     setInterval(atualizarProximosHorarios, 30000);
 })();
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    const swPath = window.location.pathname.includes("/HTML/") ? "../sw.js" : "./sw.js";
+
+    navigator.serviceWorker
+      .register(swPath)
+      .catch((erro) => {
+        console.error("Erro ao registrar o service worker:", erro);
+      });
+  });
+}

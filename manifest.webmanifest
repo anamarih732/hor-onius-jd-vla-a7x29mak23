@@ -1,0 +1,17 @@
+{
+  "name": "Horários dos Ônibus",
+  "short_name": "Horários dos Ônibus",
+  "description": "Meu site instalado como aplicativo",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "./img/icone-app.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
