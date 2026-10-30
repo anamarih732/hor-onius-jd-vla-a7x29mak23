@@ -1,4 +1,4 @@
-const CACHE_NAME = "meu-app-v10";
+const CACHE_NAME = "meu-app-v4";
 
 const ARQUIVOS = [
   "./",

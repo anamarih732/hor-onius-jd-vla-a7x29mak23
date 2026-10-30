@@ -125,6 +125,43 @@
     setInterval(atualizarProximosHorarios, 30000);
 })();
 
+(function () {
+    const toast = document.getElementById('toast-atualizacao');
+    const fecharToast = document.querySelector('.toast-fechar');
+    const storageKey = 'toastAtualizacaoExibicoes';
+    const maxExibicoes = 3;
+
+    if (!toast) {
+        return;
+    }
+
+    try {
+        const exibicoes = Number(window.localStorage.getItem(storageKey) || 0);
+
+        if (exibicoes >= maxExibicoes) {
+            return;
+        }
+
+        window.localStorage.setItem(storageKey, String(exibicoes + 1));
+    } catch (erro) {
+        console.warn('Não foi possível ler o contador do toast:', erro);
+    }
+
+    requestAnimationFrame(() => {
+        toast.classList.add('visible');
+    });
+
+    window.setTimeout(() => {
+        toast.classList.remove('visible');
+    }, 7000);
+
+    if (fecharToast) {
+        fecharToast.addEventListener('click', () => {
+            toast.classList.remove('visible');
+        });
+    }
+})();
+
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     const swPath = window.location.pathname.includes("/HTML/") ? "../sw.js" : "./sw.js";

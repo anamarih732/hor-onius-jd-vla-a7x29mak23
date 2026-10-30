@@ -221,6 +221,68 @@ footer {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
+.toast-atualizacao {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: min(420px, calc(100vw - 24px));
+    background: linear-gradient(135deg, #1fa35a, #178c46);
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 18px 44px 18px 18px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.toast-atualizacao.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.toast-atualizacao strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+    font-family: "Montenegrin Gothic One", serif;
+    letter-spacing: 0.02em;
+}
+
+.toast-atualizacao p,
+.toast-atualizacao li {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.toast-atualizacao ol {
+    margin: 10px 0 0 18px;
+    padding: 0;
+}
+
+.toast-fechar {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.7rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.toast-fechar:hover {
+    opacity: 1;
+}
+
 /* Cabeçalho */
 .avisos-header {
     width: 100%;
@@ -311,6 +373,14 @@ footer {
 @media (max-width: 480px) {
     .avisos-container {
         padding: 18px;
+    }
+
+    .toast-atualizacao {
+        right: 10px;
+        left: 10px;
+        width: auto;
+        bottom: 10px;
+        padding-right: 38px;
     }
 
     .avisos-header h2 {
