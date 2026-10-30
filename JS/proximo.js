@@ -107,7 +107,7 @@
     }
 
     function atualizarProximosHorarios() {
-        const cards = Array.from(document.querySelectorAll('.proximo .card p'));
+        const cards = Array.from(document.querySelectorAll('.proximo .card .card-hora'));
         const now = new Date();
 
         if (cards.length >= 2) {

@@ -92,9 +92,9 @@ nav a.vermelho:hover {
 }
 
 .ciano {
-    background-image: linear-gradient(#5b728c, #3d5167);
+    background: linear-gradient(135deg, #0e7c9d, #0a5d7f 70%, #0c3c55);
     border-radius: 8px;
-    border: 5px solid #334a5f;
+    border: 3px solid #334a5f;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     padding: 8px 12px;
 }
@@ -116,26 +116,155 @@ footer {
     text-align: center;
 }
 
-.proximo {
-    display: flex;
-    justify-content: center;
+.proximo-section {
+    width: min(980px, calc(100% - 24px));
+    margin: 24px auto 0;
+}
+
+.proximo-section > h2.ciano {
     width: 100%;
-    padding: 0;
+    margin: 0 0 18px;
+    padding: 18px 22px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #0e7c9d, #0a5d7f 70%, #0c3c55);
+    box-shadow: 0 8px 18px rgba(11, 56, 75, 0.18);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.proximo {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .card {
-    flex: 3;
-    padding: 10px;
+    background: #f3f6f8;
+    border: 1px solid rgba(12, 58, 79, 0.08);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(15, 54, 71, 0.08);
+    padding: 0;
     margin: 0;
-    margin-top: 15px;
     text-align: center;
 }
 
-.card p {
-    font-size: 35px;
+.card-header {
+    background: linear-gradient(135deg, #19a9c5, #1295b1 60%, #0e7d95);
+    color: #ffffff;
     font-family: "Montenegrin Gothic One", serif;
-    color: rgb(58, 58, 74);
+    font-size: clamp(1.2rem, 2vw, 1.9rem);
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    padding: 22px 18px 18px;
+    text-transform: uppercase;
+}
 
+.card-hora {
+    font-size: clamp(3.2rem, 8vw, 5.5rem);
+    font-family: "Montenegrin Gothic One", serif;
+    color: #0d2e3d;
+    line-height: 1;
+    padding: 18px 14px 12px;
+    letter-spacing: 0.02em;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 18px 16px;
+    background: linear-gradient(135deg, #2ec4d7, #1bb0c4);
+    color: #ffffff;
+    font-family: "Montenegrin Gothic One", serif;
+    font-size: clamp(1rem, 2vw, 1.45rem);
+    letter-spacing: 0.02em;
+}
+
+.card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+@media (max-width: 640px) {
+    .proximo-section {
+        width: min(100%, calc(100% - 12px));
+        margin-top: 18px;
+    }
+
+    .proximo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .proximo-section > h2.ciano {
+        padding: 12px 14px;
+        border-radius: 14px;
+        margin-bottom: 10px;
+        font-size: 1.8rem;
+    }
+
+    .card {
+        border-radius: 12px;
+    }
+
+    .card-header {
+        font-size: 0.9rem;
+        padding: 12px 8px 10px;
+        letter-spacing: 0.03em;
+    }
+
+    .card-hora {
+        font-size: 2.2rem;
+        padding: 12px 8px 8px;
+    }
+
+    .card-footer {
+        font-size: 0.78rem;
+        gap: 6px;
+        padding: 8px 8px 10px;
+    }
+
+    .card-icon {
+        width: 18px;
+        height: 18px;
+        font-size: 0.68rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .proximo-section > h2.ciano {
+        font-size: 1.45rem;
+        padding: 10px 12px;
+    }
+
+    .card-header {
+        font-size: 0.72rem;
+        padding: 10px 6px 8px;
+    }
+
+    .card-hora {
+        font-size: 1.9rem;
+        padding: 10px 6px 6px;
+    }
+
+    .card-footer {
+        font-size: 0.7rem;
+        gap: 5px;
+        padding: 7px 8px 8px;
+    }
 }
 
 .lista-horarios {
