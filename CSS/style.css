@@ -138,11 +138,14 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
-    width: 100%;
+    width: min(980px, 100%);
     margin: 0 auto;
 }
 
 .card {
+    width: 100%;
+    max-width: 470px;
+    justify-self: center;
     background: #f3f6f8;
     border: 1px solid rgba(12, 58, 79, 0.08);
     border-radius: 22px;
@@ -207,6 +210,12 @@ footer {
     .proximo {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
+        width: 100%;
+    }
+
+    .card {
+        max-width: none;
+        border-radius: 12px;
     }
 
     .proximo-section > h2.ciano {
@@ -214,10 +223,6 @@ footer {
         border-radius: 14px;
         margin-bottom: 10px;
         font-size: 1.8rem;
-    }
-
-    .card {
-        border-radius: 12px;
     }
 
     .card-header {
@@ -325,8 +330,9 @@ footer {
 }
 
 .final a:hover {
-    background-image: linear-gradient(#3d5167, #1f2a3b);
-    border: 5px solid #1f2a3b;
+    background: linear-gradient(135deg, #08789a, #045b7d 70%, #073045);
+    border: 3px solid #2f485f;
+    font-size: 1.05rem;
 }
 
 .avisos {
