@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="apple-touch-icon" href="./img/icone-app.png">
     <title>Horário dos Ônibus</title>
 </head>
+
 <body>
     <header>
         <img src="img/bus.png">
@@ -26,16 +28,96 @@
         <a class="vermelho fonte" href="HTML/701.html">701</a>
         <a class="verde fonte" href="HTML/702.html">702</a>
         <a class="azul fonte" href="HTML/549.html">549</a>
-        <p class="ciano fonte" style="font-size: 28px; padding: 25px 10px; border:none; cursor: not-allowed;">Em Breve...</p>
+        <p class="ciano fonte" style="font-size: 28px; padding: 25px 10px; border:none; cursor: not-allowed;">Em
+            Breve...</p>
     </nav>
-    <div class="fonte avisospai">
-        <p class="avisos" style="color: greenyellow;">Os horários estão atualizados? Sim! (28/09/2026)</p>
-        <p class="avisos">Atenção: Os próximos horários de alguns FERIADOS podem ser mostrados com base nos DIAS ÚTEIS.</p>
-        <p class="avisos">Dica: Para tornar o site mais eficiente, salve-o na tela inicial do celular, clicando nos três pontinhos de seu navegador.</p>
-        <p class="avisos">Obs: Este site foi desenvolvido por mim para fins estudantis e NÃO é oficial. Para mais informações, acesse o site oficial da Prefeitura de Juiz de Fora.⬇️</p>       
-        <a class="avisos" href="https://www.pjf.mg.gov.br/onibus/itinerario/" target="_blank">https://www.pjf.mg.gov.br/</a>
-        
-    </div>
+
+    <header class="avisos-header">
+        <div class="avisos-icone"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert preview-icon"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></div>
+        <div>
+            <h2 class="fonte">Avisos Importantes (30/10/2026)</h2>
+        </div>
+    </header>
+
+    <section class="avisos-container">
+        <div class="avisos-lista">
+
+            <!-- Pergunta 1 -->
+            <div class="aviso-item">
+                <button class="aviso-pergunta" aria-expanded="false" aria-controls="resposta-1">
+                    <span class="fonte">Os horários estão atualizados?</span>
+                    <span class="aviso-seta" aria-hidden="true">⌄</span>
+                </button>
+
+                <div class="aviso-resposta" id="resposta-1" hidden>
+                    <p class="fonte">Sim! Os horários sempre estão atualizados conforme o site oficial da
+                        Prefeitura.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="aviso-item">
+                <button class="aviso-pergunta" aria-expanded="false" aria-controls="resposta-2">
+                    <span class="fonte">Atenção aos próximos horários</span>
+                    <span class="aviso-seta" aria-hidden="true">⌄</span>
+                </button>
+
+                <div class="aviso-resposta" id="resposta-2" hidden>
+                    <p class="fonte">Os próximos horários de alguns FERIADOS podem ser mostrados com base nos DIAS
+                        ÚTEIS, por isso é sempre bom conferir a grade de horários caso seja feriado.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="aviso-item">
+                <button class="aviso-pergunta" aria-expanded="false" aria-controls="resposta-3">
+                    <span class="fonte">Consigo usar este site offline?</span>
+                    <span class="aviso-seta" aria-hidden="true">⌄</span>
+                </button>
+
+                <div class="aviso-resposta" id="resposta-3" hidden>
+                    <p class="fonte">Sim! Você pode instalar este site na sua tela inicial e acessá-lo offline.
+                        Para isto, veja o passo
+                        a passo abaixo.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="aviso-item">
+                <button class="aviso-pergunta" aria-expanded="false" aria-controls="resposta-3">
+                    <span class="fonte">Como instalar este site?</span>
+                    <span class="aviso-seta" aria-hidden="true">⌄</span>
+                </button>
+
+                <div class="aviso-resposta" id="resp4sta-3" hidden>
+                    <p class="fonte">Para instalar este site na tela inicial (como se fosse um aplicativo), siga
+                        os passos abaixo:<br>
+
+                        1-Clique nos três pontinhos no canto superior direito da tela (:);<br>
+                        2-Procure e clique na opção "Instalar e criar atalho" (ou opção similar);<br>
+                        3-Clique em "Instalar" e aguarde o download;<br>
+                        4-Após o download, o site aparecerá em sua tela inicial, e você poderá usá-lo offline.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="aviso-item">
+                <button class="aviso-pergunta" aria-expanded="false" aria-controls="resposta-3">
+                    <span class="fonte">Este site NÃO é oficial!</span>
+                    <span class="aviso-seta" aria-hidden="true">⌄</span>
+                </button>
+
+                <div class="aviso-resposta" id="resposta-3" hidden>
+                    <p class="fonte">Este site foi desenvolvido por mim para fins estudantis e NÃO é oficial. Para
+                        mais
+                        informações, acesse o site oficial da Prefeitura de Juiz de Fora.⬇️</p>
+                    <a class="avisos fonte" href="https://www.pjf.mg.gov.br/onibus/itinerario/"
+                        target="_blank">https://www.pjf.mg.gov.br/</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <footer>
         <p class="fonte">Mariana A.</p>
@@ -43,5 +125,8 @@
     </footer>
 
     <script src="./JS/proximo.js" defer></script>
+    <script src="./JS/avisos.js" defer></script>
+
 </body>
+
 </html>

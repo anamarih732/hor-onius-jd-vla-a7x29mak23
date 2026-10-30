@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montenegrin+Gothic+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
-header{
+
+header {
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(rgb(18, 135, 238), rgb(130, 159, 255));
@@ -13,10 +14,12 @@ header{
     align-items: center;
     padding: 16px 12px;
 }
-header img{
+
+header img {
     max-width: 60px;
 }
-nav{
+
+nav {
     display: flex;
     flex-direction: column;
     height: auto;
@@ -24,7 +27,8 @@ nav{
     align-items: center;
     margin-top: 40px;
 }
-nav a{
+
+nav a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +42,8 @@ nav a{
     text-align: center;
     border-radius: 8px;
 }
-nav p{
+
+nav p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,41 +57,49 @@ nav p{
     text-align: center;
     border-radius: 8px;
 }
-.verde{
+
+.verde {
     background-image: linear-gradient(#6cc3be, #459b96);
     border: 5px solid #59b2ae;
 }
-nav a.verde:hover{
+
+nav a.verde:hover {
     font-size: 33px;
     background-image: linear-gradient(#459995, #216e6b);
     border: 5px solid #3e8c88;
 }
-.azul{
+
+.azul {
     background-image: linear-gradient(#0074d3, #015396);
     border: 5px solid #0269be;
 }
-nav a.azul:hover{
+
+nav a.azul:hover {
     font-size: 33px;
     background-image: linear-gradient(#005eab, #003560);
     border: 5px solid #005eaa;
 }
-.vermelho{
+
+.vermelho {
     background-image: linear-gradient(#bf231f, #a3231f);
     border: 5px solid #a81510;
 }
-nav a.vermelho:hover{
+
+nav a.vermelho:hover {
     font-size: 33px;
     background-image: linear-gradient(#a41a16, #7e1612);
     border: 5px solid #870e0a;
 }
-.ciano{
+
+.ciano {
     background-image: linear-gradient(#5b728c, #3d5167);
     border-radius: 8px;
     border: 5px solid #334a5f;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     padding: 8px 12px;
 }
-footer{
+
+footer {
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(rgb(18, 135, 238), rgb(130, 159, 255));
@@ -96,19 +109,21 @@ footer{
     justify-content: center;
     align-items: center;
 }
-.fonte{
+
+.fonte {
     color: white;
     font-family: "Montenegrin Gothic One", serif;
     text-align: center;
 }
-.proximo{
+
+.proximo {
     display: flex;
     justify-content: center;
     width: 100%;
     padding: 0;
 }
 
-.card{
+.card {
     flex: 3;
     padding: 10px;
     margin: 0;
@@ -116,16 +131,18 @@ footer{
     text-align: center;
 }
 
-.card p{
+.card p {
     font-size: 35px;
     font-family: "Montenegrin Gothic One", serif;
     color: rgb(58, 58, 74);
 
 }
-.lista-horarios{
+
+.lista-horarios {
     padding: 15px;
 }
-.grade-horarios{
+
+.grade-horarios {
     display: grid;
     grid-template-columns: repeat(3, minmax(90px, 1fr));
     gap: 10px;
@@ -133,7 +150,7 @@ footer{
     margin-bottom: 20px;
 }
 
-.horario-item-verde{
+.horario-item-verde {
     background: #f4f9ff;
     border: 2px solid #59b2ae;
     border-radius: 8px;
@@ -143,7 +160,8 @@ footer{
     font-weight: bold;
     color: #1f4f4c;
 }
-.horario-item-azul{
+
+.horario-item-azul {
     background: #f4f9ff;
     border: 2px solid #0074d3;
     border-radius: 8px;
@@ -153,7 +171,8 @@ footer{
     font-weight: bold;
     color: #1f344f;
 }
-.horario-item-vermelho{
+
+.horario-item-vermelho {
     background: #f4f9ff;
     border: 2px solid #bf231f;
     border-radius: 8px;
@@ -163,33 +182,153 @@ footer{
     font-weight: bold;
     color: #4f1f1f;
 }
-.final{
+
+.final {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.final a{
+
+.final a {
     text-decoration: none;
     padding: 15px 30px;
     margin-bottom: 10px;
 }
-.final a:hover{
+
+.final a:hover {
     background-image: linear-gradient(#3d5167, #1f2a3b);
     border: 5px solid #1f2a3b;
 }
-.avisos{
+
+.avisos {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     margin: 15px;
-    background-image: linear-gradient(#788ea7, #687f98);
-    border: 2px solid #5b728c;
+    background-image: linear-gradient(rgb(18, 135, 238), rgb(130, 159, 255));
     border-radius: 8px;
 }
 
+/* Container principal */
+.avisos-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Cabeçalho */
+.avisos-header {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    align-items: center;
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+    padding-bottom: 18px;
+}
+
+.avisos-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Lista de perguntas */
+.aviso-item {
+    border: 1px solid #e9e9e9;
+    border-radius: 9px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+.aviso-item:hover {
+    border-color: #cfcfcf;
+}
+
+/* Pergunta clicável */
+.aviso-pergunta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 17px;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.aviso-pergunta span {
+    color: black;
+}
+
+.aviso-pergunta:hover {
+    background-color: #fafafa;
+}
+
+/* Ícone de expandir */
+.aviso-seta {
+    font-size: 20px;
+    color: #777;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+.aviso-item.ativo .aviso-seta {
+    transform: rotate(180deg);
+}
+
+/* Resposta */
+.aviso-resposta {
+    display: none;
+    padding: 0 17px 17px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: black;
+    background-color: #fff;
+}
+
+.aviso-resposta p {
+    color: black;
+    text-align: start;
+}
+
+.aviso-item.ativo .aviso-resposta {
+    display: block;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 480px) {
+    .avisos-container {
+        padding: 18px;
+    }
+
+    .avisos-header h2 {
+        font-size: 19px;
+    }
+
+    .aviso-pergunta {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .aviso-resposta {
+        padding: 0 14px 14px;
+    }
+}
+
 @media only screen and (min-width: 950px) {
-    nav{
+    nav {
         display: grid;
         grid-template-columns: auto auto auto auto;
         height: auto;
@@ -198,43 +337,48 @@ footer{
         gap: 50px;
         margin-top: 60px;
         margin-bottom: 40px;
-} 
-    .avisospai{
+    }
+
+    .avisospai {
         display: flex;
         flex-direction: row;
         justify-content: center;
 
     }
-    .avisos{
-    padding: 15px;
-    margin: 15px;
-    background-image: linear-gradient(#788ea7, #687f98);
-    border: 2px solid #5b728c;
-    border-radius: 8px;
-    width: fit-content;
-}
-    .proximo{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 0;
-    padding-left: 70px;
-    padding-right: 70px;
-}
-    .lista-horarios{
-    padding: 95px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-    .grade-horarios{
-    display: grid;
-    grid-template-columns: repeat(7, minmax(50px, 7fr));
-    gap: 15px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
+
+    .avisos {
+        padding: 15px;
+        margin: 15px;
+        background-image: linear-gradient(#788ea7, #687f98);
+        border: 2px solid #5b728c;
+        border-radius: 8px;
+        width: fit-content;
+    }
+
+    .proximo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .lista-horarios {
+        padding: 95px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .grade-horarios {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(50px, 7fr));
+        gap: 15px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
     nav p {
         display: none;
     }
 }
-
